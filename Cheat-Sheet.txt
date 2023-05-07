@@ -1,11 +1,19 @@
 Docker Cheetsheet 💥
 ==
 
-bash=
-docker pull nginx #Pull Nginx
-docker run --name docker-nginx -p 80:80 nginx #Expose Nginx 80 Port
-docker run --name docker-nginx -p 8080:80 -d nginx #Expose 8080
+#Pull Nginx
+docker pull nginx 
+
+#Expose Nginx 80 Port
+docker run --name docker-nginx -p 80:80 nginx
+
+#Expose 8080
+docker run --name docker-nginx -p 8080:80 -d nginx 
+
+#runs in attached mode
 docker run -P nginx
+
+#runs in detached mode
 docker run -d -P nginx
 
 
@@ -34,7 +42,7 @@ docker system prune -a                      # Remove all unused containers, netw
 docker volume prune                         # Remove all unused local volumes
 docker network prune                        # Remove all unused networks
 
-cd usr/share/nginx/html/
+
 
 docker volume create my_vol                 # Create a volume
 docker volume ls
